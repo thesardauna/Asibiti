@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Test Search</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#/">LabSearch</a>
+      <span class="subtle">MVP</span>
+    </header>
+
+    <main class="container">
+      <!-- Home (Google-like) -->
+      <section id="view-home" class="view">
+        <div class="hero">
+          <div class="logo" aria-hidden="true">LabSearch</div>
+          <div class="search-wrap" role="search">
+            <label class="sr-only" for="qHome">Search lab tests</label>
+            <input
+              id="qHome"
+              class="search-input"
+              type="search"
+              placeholder="Search lab tests…"
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <div id="suggestionsHome" class="suggestions" role="listbox" aria-label="Suggestions"></div>
+            <div class="actions">
+              <button id="btnSearchHome" class="btn primary" type="button">Search</button>
+              <button id="btnClearHome" class="btn" type="button">Clear</button>
+            </div>
+          </div>
+          <p class="disclaimer">
+            For education only, consult a qualified clinician for medical decisions.
+          </p>
+        </div>
+      </section>
+
+      <!-- Results -->
+      <section id="view-results" class="view hidden">
+        <div class="results-head">
+          <div class="results-search">
+            <label class="sr-only" for="qResults">Search lab tests</label>
+            <input
+              id="qResults"
+              class="search-input compact"
+              type="search"
+              placeholder="Search lab tests…"
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <div id="suggestionsResults" class="suggestions compact" role="listbox" aria-label="Suggestions"></div>
+            <button id="btnSearchResults" class="btn primary" type="button">Search</button>
+          </div>
+
+          <p id="resultsMeta" class="meta"></p>
+          <p class="disclaimer small">
+            For education only, consult a qualified clinician for medical decisions.
+          </p>
+        </div>
+
+        <div id="resultsList" class="cards"></div>
+
+        <div class="footer-actions">
+          <a class="link" href="#/">Back to home</a>
+        </div>
+      </section>
+
+      <!-- Details -->
+      <section id="view-details" class="view hidden">
+        <div class="details">
+          <div class="details-actions">
+            <button id="btnBackToResults" class="btn" type="button">Back to results</button>
+            <a class="link" href="#/">Home</a>
+          </div>
+
+          <h1 id="detailsTitle" class="details-title"></h1>
+
+          <div class="details-grid">
+            <div class="detail-block">
+              <h2>Clinical purpose</h2>
+              <p id="detailsPurpose"></p>
+            </div>
+
+            <div class="detail-block">
+              <h2>Biomarker or parameter</h2>
+              <p id="detailsBiomarker"></p>
+            </div>
+
+            <div class="detail-block">
+              <h2>All possible Range / Values</h2>
+              <p id="detailsRange"></p>
+            </div>
+
+            <div class="detail-block">
+              <h2>Meaning / Result Interpretation</h2>
+              <p id="detailsInterpretation"></p>
+            </div>
+
+            <div class="detail-block">
+              <h2>General Notes</h2>
+              <p id="detailsNotes"></p>
+            </div>
+
+            <div class="detail-block">
+              <h2>Synonyms</h2>
+              <p id="detailsSynonyms"></p>
+            </div>
+          </div>
+
+          <p class="disclaimer small">
+            For education only, consult a qualified clinician for medical decisions.
+          </p>
+        </div>
+      </section>
+
+      <!-- Loading / error -->
+      <section id="view-loading" class="view hidden">
+        <div class="center">
+          <div class="spinner" aria-hidden="true"></div>
+          <p class="meta" id="loadingText">Loading dataset…</p>
+        </div>
+      </section>
+
+      <section id="view-error" class="view hidden">
+        <div class="center">
+          <h1>Could not load data</h1>
+          <p class="meta" id="errorText"></p>
+          <a class="link" href="#/">Go back</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
