@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab Test Search</title>
+    <title>Asibiti</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="topbar">
-      <a class="brand" href="#/">LabSearch</a>
+      <a class="brand" href="#/">Asibiti</a>
       <span class="subtle">MVP</span>
     </header>
 
@@ -16,7 +16,8 @@
       <!-- Home (Google-like) -->
       <section id="view-home" class="view">
         <div class="hero">
-          <div class="logo" aria-hidden="true">LabSearch</div>
+          <div class="logo" aria-hidden="true">Asibiti</div>
+
           <div class="search-wrap" role="search">
             <label class="sr-only" for="qHome">Search lab tests</label>
             <input
@@ -27,14 +28,25 @@
               autocomplete="off"
               spellcheck="false"
             />
-            <div id="suggestionsHome" class="suggestions" role="listbox" aria-label="Suggestions"></div>
+
+            <div
+              id="suggestionsHome"
+              class="suggestions"
+              role="listbox"
+              aria-label="Suggestions"
+            ></div>
+
             <div class="actions">
-              <button id="btnSearchHome" class="btn primary" type="button">Search</button>
+              <button id="btnSearchHome" class="btn primary" type="button">
+                Search
+              </button>
               <button id="btnClearHome" class="btn" type="button">Clear</button>
             </div>
           </div>
+
           <p class="disclaimer">
-            For education only, consult a qualified clinician for medical decisions.
+            For education only, consult a qualified clinician for medical
+            decisions.
           </p>
         </div>
       </section>
@@ -52,13 +64,24 @@
               autocomplete="off"
               spellcheck="false"
             />
-            <div id="suggestionsResults" class="suggestions compact" role="listbox" aria-label="Suggestions"></div>
-            <button id="btnSearchResults" class="btn primary" type="button">Search</button>
+
+            <div
+              id="suggestionsResults"
+              class="suggestions compact"
+              role="listbox"
+              aria-label="Suggestions"
+            ></div>
+
+            <button id="btnSearchResults" class="btn primary" type="button">
+              Search
+            </button>
           </div>
 
           <p id="resultsMeta" class="meta"></p>
+
           <p class="disclaimer small">
-            For education only, consult a qualified clinician for medical decisions.
+            For education only, consult a qualified clinician for medical
+            decisions.
           </p>
         </div>
 
@@ -73,7 +96,9 @@
       <section id="view-details" class="view hidden">
         <div class="details">
           <div class="details-actions">
-            <button id="btnBackToResults" class="btn" type="button">Back to results</button>
+            <button id="btnBackToResults" class="btn" type="button">
+              Back to results
+            </button>
             <a class="link" href="#/">Home</a>
           </div>
 
@@ -112,12 +137,13 @@
           </div>
 
           <p class="disclaimer small">
-            For education only, consult a qualified clinician for medical decisions.
+            For education only, consult a qualified clinician for medical
+            decisions.
           </p>
         </div>
       </section>
 
-      <!-- Loading / error -->
+      <!-- Loading -->
       <section id="view-loading" class="view hidden">
         <div class="center">
           <div class="spinner" aria-hidden="true"></div>
@@ -125,6 +151,7 @@
         </div>
       </section>
 
+      <!-- Error -->
       <section id="view-error" class="view hidden">
         <div class="center">
           <h1>Could not load data</h1>
